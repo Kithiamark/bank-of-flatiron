@@ -8,21 +8,20 @@ import FilterBar from './components/FilterBar';
 
 // Main component for the application
 const App = () => {
-  // State variables for managing transactions and search term
   const [transactions, setTransactions] = useState([
     // Example transactions array
-
       { date: new Date(2024, 3, 1), description: "Groceries", amount: 50.00, category: "Groceries" },
       { date: new Date(2024, 3, 2), description: "Gas", amount: 35.75, category: "Transportation" },
       { date: new Date(2024, 3, 3), description: "Restaurant", amount: 45.25, category: "Dining" },
       { date: new Date(2024, 3, 4), description: "Utilities", amount: 100.00, category: "Utilities" },
       { date: new Date(2024, 3, 5), description: "Shopping", amount: 75.50, category: "Shopping" },
   ]);
-  const [searchTerm, setSearchTerm] = useState(''); // String to hold search term
+  const [searchTerm, setSearchTerm] = useState(''); 
 
   // Function to handle adding a new transaction
   const handleAddTransaction = (newTransaction) => {
-    setTransactions([...transactions, newTransaction]); // Appending new transaction to existing transactions array
+    setTransactions.map([...transactions, newTransaction]);
+     // Appending new transaction to existing transactions array
   };
 
   // Filtering transactions based on search term
